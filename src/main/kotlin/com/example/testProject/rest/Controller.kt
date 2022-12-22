@@ -29,6 +29,6 @@ class Controller(
     data class AccountResponse(
         val id: Long,
         val currency: Currency,
-        val participantId: Long
+        val participantId: Long?
     )
 }
