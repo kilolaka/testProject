@@ -20,13 +20,15 @@ class Controller(
     private fun AccountsEntity.toResponse(): AccountResponse {
         return AccountResponse(
             id = this.id,
-            currency = this.currency
+            currency = this.currency,
+            participantId = this.participantId
         )
     }
 
     @ApiModel
     data class AccountResponse(
         val id: Long,
-        val currency: Currency
+        val currency: Currency,
+        val participantId: Long
     )
 }

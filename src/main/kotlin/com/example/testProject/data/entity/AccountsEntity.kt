@@ -23,5 +23,5 @@ class AccountsEntity(
     val currency: Currency,
 
     @Column(name = "participant_id", nullable = false)
-    val participantId: Int
+    val participantId: Long
 )
