@@ -14,7 +14,7 @@ class Controller(
 
     @GetMapping("v1/test")
     fun readAllAccounts(): List<AccountResponse> {
-        return accountsRepository.findAll().map { it.toResponse() }
+        return accountsRepository.findAll().sortedBy { it.participantId }.map { it.toResponse() }
     }
 
     private fun AccountsEntity.toResponse(): AccountResponse {
